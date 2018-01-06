@@ -1,0 +1,75 @@
+# The start symbol is START.
+
+# These two rules are required; please do not change these weights!
+99	START	S1
+1	START	S2
+
+# This is a very, very, very simple grammar to get you started.
+
+# Sentences
+1	S1	NP VP last
+1	S1	VP last
+1	S1	verb1 S1
+1	S1	NOT S1
+1	S1	whadv S1
+
+
+
+#  Verb phrases
+1	VP	VerbT NP
+1	VP	verbpast VP
+1	VP	TO NP
+1	VP	verbpastpar VP
+1	VP	verb3 PP
+1	VP	Modals VP
+1	VP	verbbase VP
+1	VP	verbpastpar
+1	VP	verbpre PP
+1	VP	verbpre NP
+1	VP	verbpre VP
+1	VP	Adverbs VP
+1	VP	Adverbs
+1	VP	Adverbs PP
+1	VP	sverb VP
+1	VP	TO VP
+1	VP	verbbase NP
+1	VP	VerbT NOT Adjective
+1	VP	verbbase
+1	VP	verb3
+
+#challenging sents
+
+1	VP	ppr NP
+1	VP	verb3 Adverbs
+
+
+# Noun phrases
+20	NP	Det Nbar
+1	NP	Proper
+1	NP	Det Adjective NP
+1	NP	Nbar PP
+1	NP	Det NP
+1	NP	pn
+1	NP	Det Adjective Nbar
+1	NP	Det sAdjective NP
+1	NP	pnouns
+1	NP	num NP
+1	NP	Proper PP
+1	NP	Adjective pnouns
+1	NP	ppn
+1	NP	Proper cc NP
+1	NP	pr
+1	NP	Nbar
+1	NP	pn VP
+
+# Noun phrase, inner level
+20	Nbar	Noun
+1	Nbar	Nbar PP
+
+
+# Prepositional phrase
+1	PP	Prep NP
+
+#challenging sents
+
+1	PP	Det VP
